@@ -1,37 +1,36 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "./Providers/AuthProvider";
 
 const Navbar = () => {
-  const [theme, setTheme] = useState('light');
+  const { user, logout } = useContext(AuthContext);
+  const [theme, setTheme] = useState("light");
 
-  useEffect(() =>{
-    localStorage.setItem('theme', theme)
-    const localTheme = localStorage.getItem('theme')
-    document.querySelector('html').setAttribute('data-theme', localTheme )
-  }, [theme])
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
 
-  const handleTheme = e =>{
-    if(e.target.checked){
-      setTheme('synthwave')
+  const handleTheme = (e) => {
+    if (e.target.checked) {
+      setTheme("synthwave");
+    } else {
+      setTheme("light");
     }
-    else{
-      setTheme('light')
-    }
-  }
+  };
 
   // log out
-  // const handleLogout = () =>{
-  //   logout()
-  //   .then(result =>{
-  //     console.log(result.user)
-  //   })
-  //   .catch(error=>{
-  //     console.error(error)
-  //   })
-  // }
+  const handleLogout = () => {
+    logout()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
-
-  
   const navlinks = (
     <>
       <li>
@@ -82,20 +81,24 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
       </div>
       <div className="navbar-end gap-4">
-        <div className="w-10 rounded-full">
-          <img
-            className="rounded-full"
-            alt="profile picture"
-            src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-          />
-        </div>
-        {/* {
-          user ? <button onClick={handleLogout} className="btn px-6 btn-warning">Log Out</button>:
-        <Link className="btn px-6 btn-success" to="/login">
-          Login
-        </Link>
-        } */}
-        <a className="btn btn-success">Login</a>
+        <div className="w-10 rounded-full"></div>
+        {user ? 
+          <div className="flex gap-4">
+            <img
+              className="w-14 rounded-full"
+              alt="profile picture"
+              src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+            />
+            <button onClick={handleLogout} className="btn px-6 btn-warning">
+              Log Out
+            </button>
+          </div>
+         : 
+          <Link className="btn px-6 btn-success" to="/login">
+            Login
+          </Link>
+        }
+       
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
           <input

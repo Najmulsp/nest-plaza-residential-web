@@ -2,31 +2,31 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./Providers/AuthProvider";
+// import auth from "../Firebase/FirebaseConfig";
+// import googleProvider from "./Providers/AuthProvider";
+// import githubProvider from "./Providers/AuthProvider";
 
 const Login = () => {
-  const {login, logout, user} = useContext(AuthContext);
+  const { login, googleLogin, githubLogin } = useContext(AuthContext);
 
-
-  const handleLogin = e =>{
+  const handleLogin = (e) => {
     e.preventDefault();
 
     const email = e.target.email.value;
     const password = e.target.email.value;
-    console.log(email, password)
+    console.log(email, password);
 
     // login
     login(email, password)
-    .then((result) => {
-      console.log(result.user);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
-    // logout
-    logout();
-    
-  }
+
   return (
     <div className="hero  min-h-screen bg-base-200">
       <Helmet>
@@ -37,10 +37,7 @@ const Login = () => {
           <h1 className="text-5xl text-center font-bold px-4 mt-6">
             Login now!
           </h1>
-          <form
-              onSubmit={handleLogin}
-            className="card-body"
-          >
+          <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -64,12 +61,8 @@ const Login = () => {
                 className="input input-bordered"
                 required
               />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
             </div>
+
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
             </div>
@@ -82,10 +75,18 @@ const Login = () => {
           </p>
           <div className="flex justify-center items-center gap-6 pb-4">
             <p>Log in with</p>
-            <button className="btn btn-outline btn-primary text-secondary">
+            <button
+              onClick={() => {googleLogin()}}
+              className="btn btn-outline btn-primary text-secondary"
+            >
               Google
             </button>
-            <button className="btn btn-outline btn-secondary ">Github</button>
+            <button
+              // onClick={}
+              className="btn btn-outline btn-secondary "
+            >
+              Github
+            </button>
           </div>
         </div>
       </div>
