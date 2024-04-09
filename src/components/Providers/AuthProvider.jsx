@@ -55,6 +55,7 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithPopup(auth, githubProvider)
   }
+  
 
 
   // passing value
@@ -66,7 +67,7 @@ const AuthProvider = ({ children }) => {
     logout,
     googleLogin,
     githubLogin,
-
+    
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

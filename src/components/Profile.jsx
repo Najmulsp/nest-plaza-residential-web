@@ -57,6 +57,18 @@ const Profile = () => {
             </div>
             <div className="form-control">
               <label className="label">
+                <span className="label-text">Phone Number</span>
+              </label>
+              <input
+                type="number"
+                name="number"
+                placeholder="Phone Number"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
                 <span className="label-text">Password</span>
               </label>
               <input
