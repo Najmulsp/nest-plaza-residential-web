@@ -1,13 +1,17 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate} from "react-router-dom";
 import { AuthContext } from "./Providers/AuthProvider";
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 // import auth from "../Firebase/FirebaseConfig";
 // import googleProvider from "./Providers/AuthProvider";
 // import githubProvider from "./Providers/AuthProvider";
 
 const Login = () => {
   const { login, googleLogin, githubLogin } = useContext(AuthContext);
+  const location =useLocation();
+  const navigate =useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -20,6 +24,9 @@ const Login = () => {
     login(email, password)
       .then((result) => {
         console.log(result.user);
+        // const successToast= () => toast("You have successfully logged in");
+        // navigate
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -38,6 +45,7 @@ const Login = () => {
             Login now!
           </h1>
           <form onSubmit={handleLogin} className="card-body">
+          {/* <ToastContainer />onClick={successToast}  */}
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -82,7 +90,7 @@ const Login = () => {
               Google
             </button>
             <button
-              // onClick={}
+               onClick={() => {githubLogin()}}
               className="btn btn-outline btn-secondary "
             >
               Github

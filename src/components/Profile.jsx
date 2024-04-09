@@ -28,7 +28,7 @@ const Profile = () => {
                 name="name"
                 placeholder="Name"
                 className="input input-bordered"
-                required
+                
               />
             </div>
             <div className="form-control">
@@ -40,7 +40,7 @@ const Profile = () => {
                 name="email"
                 placeholder="Email"
                 className="input input-bordered"
-                required
+                
               />
             </div>
             <div className="form-control">
@@ -52,7 +52,7 @@ const Profile = () => {
                 name="photo"
                 placeholder="URL of your Photo "
                 className="input input-bordered"
-                required
+                
               />
             </div>
             <div className="form-control">
@@ -64,7 +64,7 @@ const Profile = () => {
                 name="number"
                 placeholder="Phone Number"
                 className="input input-bordered"
-                required
+                
               />
             </div>
             <div className="form-control">
@@ -76,7 +76,18 @@ const Profile = () => {
                 name="password"
                 placeholder="Password"
                 className="input input-bordered"
-                required
+                
+              />
+            </div>
+            <div className="form-control">
+              
+              <input
+                
+                type="submit"
+                name="updateProfile"
+                placeholder="Save Change"
+                className="input input-bordered bg-blue-400"
+                
               />
             </div>
             

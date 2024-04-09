@@ -6,6 +6,8 @@ import Login from "../Login";
 import Register from "../Register";
 import Profile from "../Profile";
 import Properties from "../PrivetRoute/Properties";
+import ProtectedProperty from "../PrivetRoute/ProtectedProperty";
+import ProtectedProfile from "../PrivetRoute/ProtectedProfile";
 
 
 const router = createBrowserRouter([
@@ -21,8 +23,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/estate/:id",
-        // loader: ({params}) => fetch(`./Estate.json/${params.id}`),
-        element: <Properties></Properties>,
+         loader: ({params}) => fetch(`/Estate.json/${params.id}`),
+        element: <ProtectedProperty><Properties></Properties></ProtectedProperty>,
       },
       {
         path: "/login",
@@ -35,7 +37,7 @@ const router = createBrowserRouter([
 
       {
         path: "/updateProfile",
-        element: <Profile></Profile>,
+        element: <ProtectedProfile><Profile></Profile></ProtectedProfile>,
       },
     ],
   },
