@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/estate/:id",
-         loader: ({params}) => fetch(`/Estate.json/${params.id}`),
+         loader: () => fetch(`/Estate.json`),
         element: <ProtectedProperty><Properties></Properties></ProtectedProperty>,
       },
       {
