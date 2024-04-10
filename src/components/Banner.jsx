@@ -1,8 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
-// Import Swiper styles
-import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
@@ -15,9 +13,7 @@ const Banner = () => {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      //   onSlideChange={() => console.log("slide change")}
-      //   onSwiper={(swiper) => console.log(swiper)}
+      
     >
       <SwiperSlide>
         <div className='bg-[url("https://i.ibb.co/XCJHxp6/vacation-rental.webp")] bg-no-repeat bg-cover rounded-2xl  bg-[#12132D] w-full h-[550px] '>
