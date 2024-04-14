@@ -9,18 +9,18 @@ const Properties = () => {
   const property = properties.find((property) => property.id === idInt);
   console.log(property);
   return (
-    <div className="text-center">
-      <div className=" border ">
-        <div className="card w-96 mx-auto py-6 bg-base-100 shadow-xl">
+    <div className="border">
+      <div className=" border w-full mx-auto ">
+        <div className=" w-2/5 border mx-auto py-6 bg-base-100 shadow-xl">
           <figure>
-            <img src={property.image} alt="Shoes" />
+            <img className="w-full" src={property.image} alt="Property image" />
           </figure>
-          <div className="card-body">
-            <h2 className="card-title">{property.estate_title}</h2>
-            <p>{property.description}</p>
-            <div className="card-actions justify-end">
-              
-            </div>
+          <div className="p-4">
+            <h2 className="font-bold">{property.estate_title}</h2>
+            <p><span className="underline">Description: </span>{property.description}</p>
+            <p className="font-bold">Area: {property.area}</p>
+            <p><span className="font-bold">Facilities: </span>{property.facilities}</p>
+            
           </div>
         </div>
       </div>

@@ -4,12 +4,13 @@
       "estate_title": "Graceland Chip Chop",
       "image": "https://i.ibb.co/XCJHxp6/vacation-rental.webp",
       "segment_name": "Residential",
-      "description": "Beautiful and modern residential home with 3 bedrooms and a spacious garden.",
+      "description": "Beautiful and modern residential home with 3 bedrooms and a spacious garden. clean and bright room. The breakfast is fresh. Do not miss this opportunity and make an appointment quickly for a viewing of this beautiful home!",
+
       "price": "$550000",
       "status": "rent",
       "area": "1600 sq ft",
       "location": "Washington dc",
-      "facilities": ["living room", "swimming pool", "kitchen"]
+      "facilities": ["living room,    ", "swimming pool,     ", "kitchen"]
     },
     {
       "id": 2,
