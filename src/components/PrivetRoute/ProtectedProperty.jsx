@@ -11,7 +11,10 @@ const ProtectedProperty = ({ children }) => {
 
 
     if(loading){
-        return <span className="loading loading-spinner loading-lg"></span>
+        return <div className="w-full flex justify-center">
+          <span className="loading loading-spinner loading-lg
+        "></span>
+        </div>
     }
   if (user) {
     return children;

@@ -4,7 +4,6 @@ import { AuthContext } from "./Providers/AuthProvider";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
-
 const Profile = () => {
   const { user, updateUserProfile } = useContext(AuthContext);
 
@@ -31,25 +30,23 @@ const Profile = () => {
   };
 
   const handleUpdate = () => {
-  
     setLoading(true);
-    updateUserProfile(name, photo)
-      // .then((result) => {
-      //   console.log(result);
-      // })
-      // .catch((error) => {
-      //   console.error(error);
-      // });
-      toast.success('Profile updated successfully');
-      location.reload();
-      setTimeout(setLoading, 1500, false);
-
+    updateUserProfile(name, photo);
+    // .then((result) => {
+    //   console.log(result);
+    // })
+    // .catch((error) => {
+    //   console.error(error);
+    // });
+    toast.success("Your profile has updated successfully");
+    location.reload();
+    setTimeout(setLoading, 1500, false);
   };
 
   return loading ? (
     ""
   ) : (
-    <div>
+    <div className="">
       {user && <p src={user.displayName} alt=""></p>}
       {/* input */}
       <div className="hero-content w-4/5 mx-auto">
@@ -57,8 +54,20 @@ const Profile = () => {
           <h1 className="text-5xl text-center font-bold px-4 mt-6">
             My Profile
           </h1>
-           
-          <div>
+          <div className="">
+            <img
+              className="w-52 mx-auto my-6 h-52 rounded-full"
+              src={
+                user
+                  ? photo
+                  // : "https://i.ibb.co/hBtcNgp/blank-profile-picture.webp"
+                  : "https://i.ibb.co/RPpmvwb/images-blank-profile.png"
+              }
+              alt="profile image"
+            />
+            <p className="text-center">{user?name:''}</p>
+          </div>
+          <div className="p-4">
             <div>
               <h2> Your Name:</h2>
               <input
@@ -85,10 +94,9 @@ const Profile = () => {
                 Update Now
               </button>
             </div>
-            ;
           </div>
           <p className="p-3 text-center">
-            <Link to="/" className="text-blue-300 ">
+            <Link to="/" className="text-blue-500 ">
               Go to home
             </Link>
           </p>

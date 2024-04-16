@@ -5,7 +5,7 @@ import { AuthContext } from "./Providers/AuthProvider";
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
   const [theme, setTheme] = useState("light");
-// console.log(user)
+  // console.log(user)
   useEffect(() => {
     localStorage.setItem("theme", theme);
     const localTheme = localStorage.getItem("theme");
@@ -36,7 +36,7 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-       {/* <li>
+      {/* <li>
         <NavLink to="/properties">Properties</NavLink>
       </li>  */}
       <li>
@@ -52,7 +52,11 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100" data-aos="fade-down" data-aos-duration="1500" >
+    <div
+      className="navbar bg-base-100"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -79,37 +83,39 @@ const Navbar = () => {
           </ul>
         </div>
         <a className="btn btn-ghost text-2xl">
-          <span className="text-amber-500">Nest</span> <span className="text-violet-600">Plaza</span>
-          </a>
+          <span className="text-amber-500">Nest</span>{" "}
+          <span className="text-violet-600">Plaza</span>
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
       </div>
       <div className="navbar-end gap-4">
         <div className="lg:w-10 rounded-full"></div>
-        {user ? 
+        {user ? (
           <div className="flex gap-4">
-           
-            <div className="flex flex-col items-center"> 
-            <img
-              title={user.displayName}
-              className="w-96 md:w-12 lg:w-14  rounded-full "
-              alt="profile picture"
-                src="https://i.ibb.co/hBtcNgp/blank-profile-picture.webp"
-              // src={user.photoURL}
-            />
-             <p>{user.displayName}</p>
+            <div className="flex flex-col items-center">
+              <img
+                title={user.displayName}
+                className="w-96 md:w-12 lg:w-14  rounded-full "
+                alt="profile picture"
+                src={user.photoURL? user.photoURL
+                  //  : "https://i.ibb.co/hBtcNgp/blank-profile-picture.webp"}
+                :"https://i.ibb.co/RPpmvwb/images-blank-profile.png"}
+              />
+              {/* <p>{user.displayName}</p> */}
+            
             </div>
             <button onClick={handleLogout} className="btn px-6 btn-warning">
               Log Out
             </button>
           </div>
-         : 
+        ) : (
           <Link className="btn px-6 btn-success" to="/login">
             Login
           </Link>
-        }
-       
+        )}
+
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
           <input
