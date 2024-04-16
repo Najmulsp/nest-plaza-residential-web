@@ -9,9 +9,9 @@ const Properties = () => {
   const property = properties.find((property) => property.id === idInt);
   console.log(property);
   return (
-    <div className="border">
-      <div className=" border w-full mx-auto ">
-        <div className=" w-2/5 border mx-auto py-6 bg-base-100 shadow-xl">
+    <div className="">
+      <div className=" w-full mx-auto ">
+        <div className="w-4/5 md:w3/5 lg:w-2/5 mx-auto py-6 bg-base-100 shadow-xl">
           <figure>
             <img className="w-full" src={property.image} alt="Property image" />
           </figure>

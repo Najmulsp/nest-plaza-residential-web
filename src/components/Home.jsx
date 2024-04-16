@@ -5,7 +5,6 @@ import Estates from "./Estates";
 
 const Home = () => {
   const estates = useLoaderData();
-  console.log(estates);
 
   return (
     <div>
@@ -14,10 +13,28 @@ const Home = () => {
       </Helmet>
 
       <Banner></Banner>
-      <div className="grid border pl-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto mt-10">
-        {estates.map((estate) => (
-          <Estates key={estate.id} estate={estate}></Estates>
-        ))}
+      <div className="mt-10">
+        <h1
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="1000"
+          className="text-center text-3xl font-bold"
+        >
+          Our Estates
+        </h1>
+        <p
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="1200"
+          className="text-center py-5"
+        >
+          Explore your options to find your perfect match
+        </p>
+        <div className="grid pl-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto ">
+          {estates.map((estate) => (
+            <Estates key={estate.id} estate={estate}></Estates>
+          ))}
+        </div>
       </div>
     </div>
   );

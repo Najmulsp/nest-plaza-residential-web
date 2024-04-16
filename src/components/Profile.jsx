@@ -1,106 +1,101 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./Providers/AuthProvider";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 
 const Profile = () => {
-    const {user}  = useContext(AuthContext);
-    return (
-        <div>
-            {
-            user && <p src={user.displayName
-            } alt="" ></p>
-            }
-            {/* input */}
-            <div className="hero-content w-4/5 mx-auto">
+  const { user, updateUserProfile } = useContext(AuthContext);
+
+  const [name, setName] = useState("");
+  const [photo, setPhoto] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setName(user?.displayName);
+    setPhoto(user?.photoURL);
+  }, [user?.displayName, user?.photoURL]);
+
+  const onChangeName = (e) => {
+    e.preventDefault();
+    const newName = e.target.value;
+    console.log(newName);
+    setName(newName);
+  };
+  const onChangePhoto = (e) => {
+    e.preventDefault();
+    const newPhoto = e.target.value;
+    console.log(newPhoto);
+    setPhoto(newPhoto);
+  };
+
+  const handleUpdate = () => {
+  
+    setLoading(true);
+    updateUserProfile(name, photo)
+      // .then((result) => {
+      //   console.log(result);
+      // })
+      // .catch((error) => {
+      //   console.error(error);
+      // });
+      toast.success('Profile updated successfully');
+      location.reload();
+      setTimeout(setLoading, 1500, false);
+
+  };
+
+  return loading ? (
+    ""
+  ) : (
+    <div>
+      {user && <p src={user.displayName} alt=""></p>}
+      {/* input */}
+      <div className="hero-content w-4/5 mx-auto">
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <h1 className="text-5xl text-center font-bold px-4 mt-6">My Profile</h1>
-          <form
-            
-            className="card-body"
-          >
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Name</span>
-              </label>
+          <h1 className="text-5xl text-center font-bold px-4 mt-6">
+            My Profile
+          </h1>
+           
+          <div>
+            <div>
+              <h2> Your Name:</h2>
               <input
                 type="text"
-                name="name"
-                placeholder="Name"
-                className="input input-bordered"
-                
+                className="input w-full bg-gray-300 mb-3 "
+                value={name}
+                onChange={(e) => onChangeName(e)}
               />
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                className="input input-bordered"
-                
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Photo URL</span>
-              </label>
+            <div>
+              <h2> Your Photo URL:</h2>
               <input
                 type="text"
-                name="photo"
-                placeholder="URL of your Photo "
-                className="input input-bordered"
-                
+                className="input bg-gray-300 w-full mb-3 "
+                value={photo}
+                onChange={(e) => onChangePhoto(e)}
               />
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Phone Number</span>
-              </label>
-              <input
-                type="number"
-                name="number"
-                placeholder="Phone Number"
-                className="input input-bordered"
-                
-              />
+            <div className="flex justify-end">
+              <button
+                onClick={handleUpdate}
+                className="btn bg-blue-700 hover:bg-blue-gray-900 text-white "
+              >
+                Update Now
+              </button>
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                className="input input-bordered"
-                
-              />
-            </div>
-            <div className="form-control">
-              
-              <input
-                
-                type="submit"
-                name="updateProfile"
-                placeholder="Save Change"
-                className="input input-bordered bg-blue-400"
-                
-              />
-            </div>
-            
-          </form>
-          <p className="p-3 text-center"> 
+            ;
+          </div>
+          <p className="p-3 text-center">
             <Link to="/" className="text-blue-300 ">
-            Go to home
+              Go to home
             </Link>
           </p>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Profile;

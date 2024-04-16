@@ -5,7 +5,6 @@
       "image": "https://i.ibb.co/XCJHxp6/vacation-rental.webp",
       "segment_name": "Residential",
       "description": "Beautiful and modern residential home with 3 bedrooms and a spacious garden. clean and bright room. The breakfast is fresh. Do not miss this opportunity and make an appointment quickly for a viewing of this beautiful home!",
-
       "price": "$550000",
       "status": "rent",
       "area": "1600 sq ft",
@@ -15,21 +14,21 @@
     {
       "id": 2,
       "estate_title": " Blue Stone Manor",
-      "image": "https://i.ibb.co/rHQn59d/homes-3.webp",
+      "image": "https://i.ibb.co/v49StGK/family-home-5.jpg",
       "segment_name": "Residential",
-      "description": "Beautiful and modern residential home with 4 bedrooms and a spacious garden.",
+      "description": "Discover this superb, recently renovated, air-conditioned studio on the top floor of a prestigious palace. Its delightful terrace offers a partial sea view and an unobstructed view of the sought-after Cimiez district. Comprising 2 lots, this property includes a bright main room with fitted kitchen, a shower room with toilet and a second room equipped with washing machine, with the possibility of installing plenty of storage space. Sold furnished.",
       "price": "$600000",
       "status": "sale",
       "area": "1700 sq ft",
       "location": "boston ha",
-      "facilities": ["living room", "swimming pool", "kitchen"]
+      "facilities": ["living room  ", "  swimming pool  ", "  kitchen"]
     },
     {
         "id": 3,
         "estate_title": "Single family home",
-        "image": "https://i.ibb.co/hRYLQ1q/apartment1.jpg",
+        "image": "https://i.ibb.co/Mh5Dyrq/family-home-8.jpg",
         "segment_name": "Residential",
-        "description": "Beautiful and modern residential home with 5 bedrooms and a spacious garden.",
+        "description": "Beautiful and modern residential home with 3 bedrooms and a spacious garden. clean and bright room. The breakfast is fresh. Do not miss this opportunity and make an appointment quickly for a viewing of this beautiful home!",
         "price": "$650000",
         "status": "rent",
         "area": "1800 sq ft",
@@ -45,25 +44,26 @@
         "price": "$700000",
         "status": "sale",
         "area": "1900 sq ft",
-        "location": "Location 4",
+        "location": "Beverly Hills",
         "facilities": ["living room", "swimming pool", "concierge service"]
       },
       {
         "id": 5,
-        "estate_title": "Greystone Mansion (Beverly Hills, California)",
-        "image": "https://i.ibb.co/XCJHxp6/vacation-rental.webp",
+        "estate_title": "Greystone Mansion, California",
+        "image": "https://i.ibb.co/rHQn59d/homes-3.webp",
+        
         "segment_name": "Residential",
         "description": "Charming villa with 7 bedrooms, a large pool, and a beautiful garden.",
         "price": "$750000",
         "status": "rent",
         "area": "2000 sq ft",
-        "location": "Beverly Hills, California",
+        "location": "California",
         "facilities": ["living room", "fitness center", "kitchen"]
       },
       {
         "id": 6,
         "estate_title": "The Spell House (Titusville,Florida)",
-        "image": "https://i.ibb.co/CJbGVYt/family-home.jpg",
+        "image": "https://i.ibb.co/2jrZ1pr/family-home-6.jpg",
         "segment_name": "Residential",
         "description": "Modern family home with 8 bedrooms, near top schools and amenities.",
         "price": "$800000",
@@ -75,7 +75,7 @@
       {
         "id": 7,
         "estate_title": "The Wave House (Venice, California)",
-        "image": "https://i.ibb.co/hRYLQ1q/apartment1.jpg",
+        "image": "https://i.ibb.co/vYyGVxS/home-7-jpeg.webp",
         "segment_name": "Residential",
         "description": "Eco-friendly house with 9 bedrooms, solar panels, and a sustainable garden.",
         "price": "$850000",
@@ -87,7 +87,7 @@
       {
         "id": 8,
         "estate_title": "Rose Cottage",
-        "image": "https://i.ibb.co/rHQn59d/homes-3.webp",
+        "image": "https://i.ibb.co/hRYLQ1q/apartment1.jpg",
         "segment_name": "Residential",
         "description": "Exclusive mansion with 10 bedrooms, private cinema, and gym.",
         "price": "$900000",
@@ -99,7 +99,7 @@
       {
         "id": 9,
         "estate_title": "Springfield Corner House",
-        "image": "https://i.ibb.co/XCJHxp6/vacation-rental.webp",
+        "image": "https://i.ibb.co/9pb8GRv/family-home-9.jpg",
         "segment_name": "Residential",
         "description": "More than a home to build your future",
         "price": "$950000",

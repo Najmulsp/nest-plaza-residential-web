@@ -13,17 +13,34 @@ const Banner = () => {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      
     >
-      <SwiperSlide>
-        <div className='bg-[url("https://i.ibb.co/XCJHxp6/vacation-rental.webp")] bg-no-repeat bg-cover rounded-2xl  bg-[#12132D] w-full h-[550px] '>
-          <h1 className="text-4xl font-extrabold text-black text-center pt-32">
+      <SwiperSlide
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+        data-aos-delay="1000"
+      >
+        <div className='bg-[url("https://i.ibb.co/jMD5BRN/banner-image-1.jpg")] object-cover bg-no-repeat bg-cover rounded-2xl  bg-[#12132D] w-full h-[550px] '>
+          {/* <div className='bg-[url("https://i.ibb.co/XCJHxp6/vacation-rental.webp")] bg-no-repeat bg-cover rounded-2xl  bg-[#12132D] w-full h-[550px] '> */}
+          <h1
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            data-aos-delay="2000"
+            className="text-4xl font-extrabold text-black text-center pt-32"
+          >
             Welcome to Nest Plaza
           </h1>
-          <p className="text-xl font-semibold text-black text-center pt-8">
+          <p
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          data-aos-delay="2400"
+          className="text-xl font-semibold text-black text-center pt-8">
             The home you are dreaming of is waiting for you
           </p>
-          <p className="text-xl font-semibold text-black text-center pt-8">
+          <p
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-delay="2800"
+          className="text-xl font-semibold text-black text-center pt-8">
             WE BELIEVE Every person deserves more than a mud hut with a thatched
             roof. We believe that everyone should have a safe place to sleep and
             a strong door to lock. This special place we call home gives us
