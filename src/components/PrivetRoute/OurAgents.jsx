@@ -74,7 +74,8 @@ const OurAgents = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center w-96 py-2 shadow-md rounded-xl sm:px-12 dark:bg-gray-100 dark:text-gray-800">
+      {/* card 2 */}
+      <div className="flex flex-col justify-center w-96 py-2 shadow-lg rounded-xl sm:px-12 dark:bg-gray-100 dark:text-gray-800">
         <img
           src="https://i.ibb.co/S3tZ1Lv/agents-2.jpg"
           alt=""
@@ -147,7 +148,8 @@ const OurAgents = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center w-96  py-2 shadow-md rounded-xl sm:px-12 dark:bg-gray-100 dark:text-gray-800">
+      {/* card 3 */}
+      <div className="flex flex-col justify-center w-96  py-6 shadow-lg rounded-xl sm:px-12 dark:bg-gray-100 dark:text-gray-800">
         <img
           src="https://i.ibb.co/PcG9LHf/agents-3.jpg"
           alt=""
@@ -220,9 +222,9 @@ const OurAgents = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center w-96  py-2 shadow-md rounded-xl sm:px-12 dark:bg-gray-100 dark:text-gray-800">
+      <div className="flex flex-col justify-center w-96  py-6 shadow-lg rounded-xl sm:px-12 dark:bg-gray-100 dark:text-gray-800">
         <img
-          src="https://source.unsplash.com/150x150/?portrait?3"
+          src="https://i.ibb.co/GnbxvxK/agent-4.webp"
           alt=""
           className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
         />
@@ -293,9 +295,9 @@ const OurAgents = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center w-96   shadow-md rounded-xl sm:px-12 dark:bg-gray-100 dark:text-gray-800">
+      <div className="flex flex-col justify-center w-96 py-6  shadow-lg rounded-xl sm:px-12 dark:bg-gray-100 dark:text-gray-800">
         <img
-          src="https://source.unsplash.com/150x150/?portrait?3"
+          src="https://i.ibb.co/3RV6JNF/agent-5.webp"
           alt=""
           className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
         />
@@ -367,9 +369,9 @@ const OurAgents = () => {
         </div>
       </div>
       {/* card-6 */}
-      <div className="flex flex-col justify-center w-96 py-2  shadow-md rounded-xl sm:px-12 dark:bg-gray-100 dark:text-gray-800">
+      <div className="flex flex-col justify-center w-96 py-6  shadow-md rounded-xl sm:px-12 dark:bg-gray-100 dark:text-gray-800">
         <img
-          src="https://source.unsplash.com/150x150/?portrait?3"
+          src="https://i.ibb.co/b6467K1/agent-6.webp"
           alt=""
           className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
         />

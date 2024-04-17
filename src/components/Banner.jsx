@@ -25,7 +25,7 @@ const Banner = () => {
             data-aos="fade-right"
             data-aos-duration="2000"
             data-aos-delay="2000"
-            className="text-4xl font-extrabold text-orange-500 text-center pt-24 lg:pt-32"
+            className="text-4xl font-extrabold text-orange-500 text-center pt-12 lg:pt-32"
           >
             Welcome to Nest Plaza
           </h1>
@@ -40,7 +40,7 @@ const Banner = () => {
           data-aos="fade-up"
           data-aos-duration="2000"
           data-aos-delay="2800"
-          className="text-xl w-4/5 mx-auto font-semibold text-orange-400 text-center pt-8">
+          className="text-xl w-4/5 mx-auto font-semibold text-orange-500 text-center pt-8">
             WE BELIEVE Every person deserves more than a mud hut with a thatched
             roof. We believe that everyone should have a safe place to sleep and
             a strong door to lock. This special place we call home gives us

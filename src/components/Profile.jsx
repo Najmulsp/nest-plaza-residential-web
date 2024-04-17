@@ -32,14 +32,8 @@ const Profile = () => {
   const handleUpdate = () => {
     setLoading(true);
     updateUserProfile(name, photo);
-    // .then((result) => {
-    //   console.log(result);
-    // })
-    // .catch((error) => {
-    //   console.error(error);
-    // });
     toast.success("Your profile has updated successfully");
-    location.reload();
+    // location.reload();
     setTimeout(setLoading, 1500, false);
   };
 

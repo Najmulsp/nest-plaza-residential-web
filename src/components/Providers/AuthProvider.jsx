@@ -28,6 +28,9 @@ const AuthProvider = ({ children }) => {
       displayName: name,
        photoURL: photo
     })
+    .then(() =>{
+      setUser({...user, displayName:name, photoURL:photo})
+    })
     
   }
 

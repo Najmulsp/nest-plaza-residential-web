@@ -1,12 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "./Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { IoEyeOutline, IoEyeOffOutline} from "react-icons/io5";
+
 
 const Login = () => {
   const { login, googleLogin, githubLogin } = useContext(AuthContext);
+  const [showPassword, setShowPassword] =useState(false)
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -14,7 +17,7 @@ const Login = () => {
     e.preventDefault();
 
     const email = e.target.email.value;
-    const password = e.target.email.value;
+    const password = e.target.password.value;
     console.log(email, password);
 
     // login
@@ -26,8 +29,8 @@ const Login = () => {
         // navigate after log in
         navigate(location?.state ? location.state : "/");
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
+        toast("User email or password not matched");
       });
   };
 
@@ -54,17 +57,22 @@ const Login = () => {
                 required
               />
             </div>
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="Password"
                 className="input input-bordered"
                 required
               />
+              <span className="text-2xl absolute top-12 right-8" onClick={() => setShowPassword(!showPassword)}>
+                {
+                  showPassword ?  <IoEyeOutline></IoEyeOutline>: <IoEyeOffOutline /> 
+                }
+              </span>
             </div>
 
             <div className="form-control mt-6">

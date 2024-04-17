@@ -34,22 +34,43 @@ const Navbar = () => {
   const navlinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+           (isActive ? "bg-amber-400" : "")}
+          to="/"
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/contact">Contact Us</NavLink>
+        <NavLink
+        className={({ isActive }) =>
+        (isActive ? "bg-amber-400" : "")}
+        to="/contact">Contact Us</NavLink>
       </li>
       <li>
-        <NavLink to="/agents">Our Agents</NavLink>
+        <NavLink
+        className={({ isActive }) =>
+        (isActive ? "bg-amber-400" : "")}
+        to="/agents">Our Agents</NavLink>
       </li>
       <li>
-        <NavLink to="/login">Login</NavLink>
+        <NavLink
+        className={({ isActive }) =>
+        (isActive ? "bg-amber-400" : "")}
+        to="/login">Login</NavLink>
       </li>
       <li>
-        <NavLink to="/register">Register</NavLink>
+        <NavLink 
+        className={({ isActive }) =>
+        (isActive ? "bg-amber-400" : "")}
+        to="/register">Register</NavLink>
       </li>
       <li>
-        <NavLink to="/updateProfile">Your Profile</NavLink>
+        <NavLink
+        className={({ isActive }) =>
+        (isActive ? "bg-amber-400" : "")}
+        to="/updateProfile">Your Profile</NavLink>
       </li>
     </>
   );
@@ -86,17 +107,16 @@ const Navbar = () => {
           </ul>
         </div>
         <a className="btn btn-ghost text-2xl">
-          <span className="text-amber-500">Nest</span>{" "}
+          <span className="text-amber-400">Nest</span>{" "}
           <span className="text-violet-600">Plaza</span>
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
       </div>
-      <div className="navbar-end gap-4">
-        <div className="lg:w-10 rounded-full"></div>
+      <div className="navbar-end  gap-4">
         {user ? (
-          <div className="flex gap-4">
+          <div className="flex items-center gap-4">
             <div className="flex flex-col items-center">
               <img
                 title={user.displayName || "user name not found"}
