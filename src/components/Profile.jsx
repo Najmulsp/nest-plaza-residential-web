@@ -47,7 +47,7 @@ const Profile = () => {
     ""
   ) : (
     <div className="">
-      {user && <p src={user.displayName} alt=""></p>}
+      {user && <p src={user?.displayName || "name not found"} alt=""></p>}
       {/* input */}
       <div className="hero-content w-4/5 mx-auto">
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -59,7 +59,7 @@ const Profile = () => {
               className="w-52 mx-auto my-6 h-52 rounded-full"
               src={
                 user
-                  ? photo
+                  ? user?.photoURL
                   // : "https://i.ibb.co/hBtcNgp/blank-profile-picture.webp"
                   : "https://i.ibb.co/RPpmvwb/images-blank-profile.png"
               }

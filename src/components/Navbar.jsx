@@ -36,9 +36,9 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      {/* <li>
-        <NavLink to="/properties">Properties</NavLink>
-      </li>  */}
+       <li>
+        <NavLink to="/contact">Contact Us</NavLink>
+      </li>  
       <li>
         <NavLink to="/login">Login</NavLink>
       </li>
@@ -96,12 +96,12 @@ const Navbar = () => {
           <div className="flex gap-4">
             <div className="flex flex-col items-center">
               <img
-                title={user.displayName}
+                title={user.displayName || "user name not found"}
                 className="w-96 md:w-12 lg:w-14  rounded-full "
                 alt="profile picture"
-                src={user.photoURL? user.photoURL
+                src={user?.photoURL
                   //  : "https://i.ibb.co/hBtcNgp/blank-profile-picture.webp"}
-                :"https://i.ibb.co/RPpmvwb/images-blank-profile.png"}
+                || "https://i.ibb.co/RPpmvwb/images-blank-profile.png"}
               />
               {/* <p>{user.displayName}</p> */}
             
