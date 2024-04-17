@@ -36,9 +36,12 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-       <li>
+      <li>
         <NavLink to="/contact">Contact Us</NavLink>
-      </li>  
+      </li>
+      <li>
+        <NavLink to="/agents">Our Agents</NavLink>
+      </li>
       <li>
         <NavLink to="/login">Login</NavLink>
       </li>
@@ -53,7 +56,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="navbar bg-base-100"
+      className="navbar bg-base-100 w-[95%] mx-auto"
       data-aos="fade-down"
       data-aos-duration="1500"
     >
@@ -97,14 +100,15 @@ const Navbar = () => {
             <div className="flex flex-col items-center">
               <img
                 title={user.displayName || "user name not found"}
-                className="w-96 md:w-12 lg:w-14  rounded-full "
+                className=" md:w-12 lg:w-14  rounded-full "
                 alt="profile picture"
-                src={user?.photoURL
+                src={
+                  user?.photoURL ||
                   //  : "https://i.ibb.co/hBtcNgp/blank-profile-picture.webp"}
-                || "https://i.ibb.co/RPpmvwb/images-blank-profile.png"}
+                  "https://i.ibb.co/RPpmvwb/images-blank-profile.png"
+                }
               />
               {/* <p>{user.displayName}</p> */}
-            
             </div>
             <button onClick={handleLogout} className="btn px-6 btn-warning">
               Log Out

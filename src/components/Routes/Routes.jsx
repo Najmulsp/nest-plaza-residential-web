@@ -9,7 +9,8 @@ import Properties from "../PrivetRoute/Properties";
 import ProtectedProperty from "../PrivetRoute/ProtectedProperty";
 import ProtectedProfile from "../PrivetRoute/ProtectedProfile";
 import ContactUs from "./ContactUs";
-
+import ProtectedAgents from "../PrivetRoute/ProtectedAgents";
+import OurAgents from "../PrivetRoute/OurAgents";
 
 const router = createBrowserRouter([
   {
@@ -20,16 +21,28 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('/Estate.json')
+        loader: () => fetch("/Estate.json"),
       },
       {
         path: "/estate/:id",
-         loader: () => fetch(`/Estate.json`),
-        element: <ProtectedProperty><Properties></Properties></ProtectedProperty>,
+        loader: () => fetch(`/Estate.json`),
+        element: (
+          <ProtectedProperty>
+            <Properties></Properties>
+          </ProtectedProperty>
+        ),
       },
       {
-        path:"/contact",
-        element: <ContactUs></ContactUs>
+        path: "/contact",
+        element: <ContactUs></ContactUs>,
+      },
+      {
+        path: "/agents",
+        element: (
+          <ProtectedAgents>
+            <OurAgents></OurAgents>
+          </ProtectedAgents>
+        ),
       },
       {
         path: "/login",
@@ -42,7 +55,11 @@ const router = createBrowserRouter([
 
       {
         path: "/updateProfile",
-        element: <ProtectedProfile><Profile></Profile></ProtectedProfile>,
+        element: (
+          <ProtectedProfile>
+            <Profile></Profile>
+          </ProtectedProfile>
+        ),
       },
     ],
   },

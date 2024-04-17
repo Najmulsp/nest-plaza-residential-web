@@ -30,7 +30,7 @@ const Home = () => {
         >
           Explore your options to find your perfect match
         </p>
-        <div className="grid pl-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto ">
+        <div className="grid pl-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto w-[95%]">
           {estates.map((estate) => (
             <Estates key={estate.id} estate={estate}></Estates>
           ))}

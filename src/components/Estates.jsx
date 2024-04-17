@@ -16,7 +16,7 @@ const Estates = ({ estate }) => {
     
       <div>
         <div
-          className="rounded-xl card w-96 bg-base-100 shadow-xl "
+          className="rounded-xl card w-80 bg-base-100 shadow-xl box-border"
           data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"
@@ -34,7 +34,7 @@ const Estates = ({ estate }) => {
             ) : (
               <p>{description}</p>
             )}
-            <div className="flex justify-between items-center">
+            <div className="">
               <p className="font-semibold text-xl">
                 <span className="text-lg">Location:</span> {location}
               </p>

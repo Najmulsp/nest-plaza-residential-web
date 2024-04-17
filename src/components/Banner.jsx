@@ -13,6 +13,7 @@ const Banner = () => {
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
+      className="w-[95%] mx-auto"
     >
       <SwiperSlide
         data-aos="zoom-in"
