@@ -96,11 +96,7 @@ const Navbar = () => {
   );
 
   return (
-    <div
-      className="navbar bg-base-100"
-      data-aos="fade-down"
-      data-aos-duration="1500"
-    >
+    <div className="navbar bg-base-100 z-30">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -121,7 +117,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1000] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navlinks}
           </ul>
@@ -187,6 +183,7 @@ const Navbar = () => {
         </label>
       </div>
     </div>
+    
   );
 };
 
