@@ -25,22 +25,24 @@ const Banner = () => {
             data-aos="fade-right"
             data-aos-duration="2000"
             data-aos-delay="2000"
-            className="text-4xl font-extrabold text-orange-500 text-center pt-8 lg:pt-32"
+            className="text-4xl font-extrabold text-orange-500 text-center pt-4 lg:pt-32"
           >
             Welcome to Nest Plaza
           </h1>
           <p
-          data-aos="fade-left"
-          data-aos-duration="2000"
-          data-aos-delay="2400"
-          className="text-xl font-semibold text-orange-500 text-center pt-8">
+            data-aos="fade-left"
+            data-aos-duration="2000"
+            data-aos-delay="2400"
+            className="text-xl font-semibold text-orange-500 text-center pt-8"
+          >
             The home you are dreaming of is waiting for you
           </p>
           <p
-          data-aos="fade-up"
-          data-aos-duration="2000"
-          data-aos-delay="2800"
-          className="text-xl w-4/5 mx-auto font-semibold text-orange-500 text-center pt-8">
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            data-aos-delay="2800"
+            className="text-xl w-4/5 mx-auto font-semibold text-orange-500 text-center pt-8"
+          >
             WE BELIEVE Every person deserves more than a mud hut with a thatched
             roof. We believe that everyone should have a safe place to sleep and
             a strong door to lock. This special place we call home gives us
@@ -51,21 +53,21 @@ const Banner = () => {
       <SwiperSlide>
         <img
           className="w-full h-[450px] lg:h-[550px] rounded-2xl  mx-auto"
-          src="https://i.ibb.co/rHQn59d/homes-3.webp"
+          src="https://i.ibb.co/Qm283YD/banner-image-4.jpg"
           alt="real estate image"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           className="w-full h-[450px] lg:h-[550px] rounded-2xl  mx-auto"
-          src="https://i.ibb.co/hRYLQ1q/apartment1.jpg"
+          src="https://i.ibb.co/LtrdGMG/banner-image-2.png"
           alt="real estate image"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           className="w-full h-[450px] lg:h-[550px] rounded-2xl mx-auto"
-          src="https://i.ibb.co/CJbGVYt/family-home.jpg"
+          src="https://i.ibb.co/jZtZ9YP/banner-image-3.jpg"
           alt="real estate image"
         />
       </SwiperSlide>

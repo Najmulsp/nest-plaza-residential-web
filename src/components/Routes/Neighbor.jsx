@@ -1,5 +1,6 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
+import { FaSackDollar } from "react-icons/fa6";
 import "leaflet/dist/leaflet.css";
 
 const Neighbor = () => {
@@ -8,7 +9,7 @@ const Neighbor = () => {
       <h1 className="text-4xl text-center font-bold">
         Explore the Neighborhoods
       </h1>
-      <div className="mb-10 flex justify-between gap-6">
+      <div className="mb-10 flex flex-col lg:flex-row justify-between gap-6">
         <div className="w-[95%] h-[200px] rounded-lg mx-auto my-10">
           <MapContainer
             className="w-full h-full"
@@ -29,13 +30,16 @@ const Neighbor = () => {
           <div className="border-l-2 border-r-2 border-b-2">
             <h1 className="text-2xl font-bold pl-2">Cleveland</h1>
             <div className="flex items-center gap-4">
-              <p className="pl-2">icon</p>
+            <HiOutlineClipboardDocumentList className="pl-2 text-2xl"/>
               <p>
                 <span className="text-xl font-semibold">Listings: </span>2
               </p>
             </div>
             <div className="flex items-center gap-4">
-            <p className="pl-2">icon</p>
+            
+            <FaSackDollar className="pl-2 text-2xl"/>
+
+
               <p>
                 <span>Price:</span>$42,00 - $450,00
               </p>
@@ -62,13 +66,13 @@ const Neighbor = () => {
           <div className="border-l-2 border-r-2 border-b-2">
             <h1 className="text-2xl font-bold pl-2">Los Angeles</h1>
             <div className="flex items-center gap-4">
-            <p className="pl-2">icon</p>
+            <HiOutlineClipboardDocumentList className="pl-2 text-2xl"/>
               <p>
                 <span className="text-xl font-semibold">Listings: </span>2
               </p>
             </div>
             <div className="flex items-center gap-4">
-            <p className="pl-2">icon</p>
+            <FaSackDollar className="pl-2 text-2xl"/>
               <p>
                 <span>Price:</span>$42,00 - $450,00
               </p>
@@ -95,13 +99,13 @@ const Neighbor = () => {
           <div className="border-l-2 border-r-2 border-b-2">
             <h1 className="text-2xl font-bold pl-2">Las Vegas</h1>
             <div className="flex items-center gap-4">
-            <p className="pl-2">icon</p>
+            <HiOutlineClipboardDocumentList className="pl-2 text-2xl"/>
               <p>
                 <span className="text-xl font-semibold">Listings: </span>2
               </p>
             </div>
             <div className="flex items-center gap-4">
-            <p className="pl-2">icon</p>
+            <FaSackDollar className="pl-2 text-2xl"/>
               <p>
                 <span>Price:</span>$42,00 - $450,00
               </p>
@@ -128,13 +132,13 @@ const Neighbor = () => {
           <div className="border-l-2 border-r-2 border-b-2">
             <h1 className="text-2xl font-bold pl-2">Philadephia</h1>
             <div className="flex items-center gap-4">
-            <p className="pl-2">icon</p>
+            <HiOutlineClipboardDocumentList className="pl-2 text-2xl"/>
               <p>
                 <span className="text-xl font-semibold">Listings: </span>2
               </p>
             </div>
             <div className="flex items-center gap-4">
-            <p className="pl-2">icon</p>
+            <FaSackDollar className="pl-2 text-2xl"/>
               <p>
                 <span>Price:</span>$42,00 - $450,00
               </p>
