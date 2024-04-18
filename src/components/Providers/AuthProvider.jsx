@@ -1,7 +1,16 @@
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import {
+  GithubAuthProvider,
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+  updateProfile,
+} from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
-import auth from "../../Firebase/FirebaseConfig"
-import PropTypes from 'prop-types';
+import auth from "../../Firebase/FirebaseConfig";
+import PropTypes from "prop-types";
 
 export const AuthContext = createContext(null);
 
@@ -9,7 +18,7 @@ const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 
 const AuthProvider = ({ children }) => {
-    // console.log(typeof children)
+  // console.log(typeof children)
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -22,17 +31,14 @@ const AuthProvider = ({ children }) => {
   };
 
   // update user profile
-  const updateUserProfile = (name, photo) =>{
-    
-   return updateProfile(auth.currentUser, {
+  const updateUserProfile = (name, photo) => {
+    return updateProfile(auth.currentUser, {
       displayName: name,
-       photoURL: photo
-    })
-    .then(() =>{
-      setUser({...user, displayName:name, photoURL:photo})
-    })
-    
-  }
+      photoURL: photo,
+    }).then(() => {
+      setUser({ ...user, displayName: name, photoURL: photo });
+    });
+  };
 
   //  observer
   useEffect(() => {
@@ -58,18 +64,16 @@ const AuthProvider = ({ children }) => {
   };
 
   // google login
-  const googleLogin = () =>{
-     setLoading(true);
-    return signInWithPopup(auth, googleProvider)
-  }
+  const googleLogin = () => {
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider);
+  };
 
   // github login
-  const githubLogin = () =>{
+  const githubLogin = () => {
     setLoading(true);
-    return signInWithPopup(auth, githubProvider)
-  }
-  
-
+    return signInWithPopup(auth, githubProvider);
+  };
 
   // passing value
   const authInfo = {
@@ -80,7 +84,7 @@ const AuthProvider = ({ children }) => {
     logout,
     googleLogin,
     githubLogin,
-    updateUserProfile
+    updateUserProfile,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
@@ -88,6 +92,6 @@ const AuthProvider = ({ children }) => {
 };
 
 AuthProvider.propTypes = {
-    children: PropTypes.object,
-}
+  children: PropTypes.object,
+};
 export default AuthProvider;

@@ -28,7 +28,6 @@ const Estates = ({ estate }) => {
           <div className="px-3 py-3 space-y-3">
             <p className="text-right">{segment_name}</p>
             <h2 className="card-title">{estate_title}</h2>
-            {/* <p><span className='underline'>Description: </span>{description}</p> */}
             {description.length > 200 ? (
               <p>{description.slice(0, 150)}...</p>
             ) : (

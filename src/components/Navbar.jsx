@@ -5,7 +5,6 @@ import { AuthContext } from "./Providers/AuthProvider";
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
   const [theme, setTheme] = useState("light");
-  // console.log(user)
   useEffect(() => {
     localStorage.setItem("theme", theme);
     const localTheme = localStorage.getItem("theme");
@@ -98,7 +97,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="navbar bg-base-100 w-[95%] mx-auto"
+      className="navbar bg-base-100"
       data-aos="fade-down"
       data-aos-duration="1500"
     >
@@ -145,11 +144,9 @@ const Navbar = () => {
                 alt="profile picture"
                 src={
                   user?.photoURL ||
-                  //  : "https://i.ibb.co/hBtcNgp/blank-profile-picture.webp"}
                   "https://i.ibb.co/RPpmvwb/images-blank-profile.png"
                 }
               />
-              {/* <p>{user.displayName}</p> */}
             </div>
             <button onClick={handleLogout} className="btn px-6 btn-warning">
               Log Out

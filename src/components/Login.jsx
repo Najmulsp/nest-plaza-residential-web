@@ -4,12 +4,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "./Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { IoEyeOutline, IoEyeOffOutline} from "react-icons/io5";
-
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 const Login = () => {
   const { login, googleLogin, githubLogin } = useContext(AuthContext);
-  const [showPassword, setShowPassword] =useState(false)
+  const [showPassword, setShowPassword] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -68,10 +67,15 @@ const Login = () => {
                 className="input input-bordered"
                 required
               />
-              <span className="text-2xl absolute top-12 right-8" onClick={() => setShowPassword(!showPassword)}>
-                {
-                  showPassword ?  <IoEyeOutline></IoEyeOutline>: <IoEyeOffOutline /> 
-                }
+              <span
+                className="text-2xl absolute top-12 right-8"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? (
+                  <IoEyeOutline></IoEyeOutline>
+                ) : (
+                  <IoEyeOffOutline />
+                )}
               </span>
             </div>
 
@@ -80,7 +84,7 @@ const Login = () => {
               <ToastContainer />
             </div>
           </form>
-          
+
           <p className="p-8">
             Do not have an account?{" "}
             <Link to="/register" className="text-sky-300">

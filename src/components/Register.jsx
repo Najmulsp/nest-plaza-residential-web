@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "./Providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { IoEyeOutline, IoEyeOffOutline} from "react-icons/io5";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 const Register = () => {
   const [registerError, setRegisterError] = useState("");
-  const [showPassword, setShowPassword] =useState(false)
+  const [showPassword, setShowPassword] = useState(false);
   const { createUser } = useContext(AuthContext);
 
   const handleRegister = (e) => {
@@ -97,21 +97,23 @@ const Register = () => {
                 placeholder="Password"
                 className="input input-bordered "
                 required
-                
               />
 
-              <span className="text-2xl absolute top-12 right-8" onClick={() => setShowPassword(!showPassword)}>
-                {
-                  showPassword ?  <IoEyeOutline></IoEyeOutline>: <IoEyeOffOutline /> 
-                }
+              <span
+                className="text-2xl absolute top-12 right-8"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? (
+                  <IoEyeOutline></IoEyeOutline>
+                ) : (
+                  <IoEyeOffOutline />
+                )}
               </span>
-
             </div>
             {registerError && <p className="text-red-500">{registerError}</p>}
 
             <div className="form-control mt-6">
               <button className="btn btn-primary">Register</button>
-              
             </div>
           </form>
 

@@ -34,9 +34,7 @@ const OurExpert = () => {
                       Find inspiration
                     </h4>
                     <p className="mt-2 dark:text-gray-600">
-                      Ex usu illum iudico molestie. Pro ne agam facete
-                      mediocritatem, ridens labore facete mea ei. Pro id
-                      apeirian dignissim.
+                    Our experienced and results-driven team is here to guide you through every step of your real estate journey.
                     </p>
                   </div>
                 </div>
@@ -55,9 +53,7 @@ const OurExpert = () => {
                       Find architect/designer
                     </h4>
                     <p className="mt-2 dark:text-gray-600">
-                      Amet utinam aliquando ut mea, malis admodum ocurreret nec
-                      et, elit tibique cu nec. Nec ex maluisset inciderint, ex
-                      quis.
+                    We understand that buying or selling a home can be stressful. That is why our experienced and local real estate professionals are here to represent your interests and guide you through the process seamlessly. 
                     </p>
                   </div>
                 </div>
@@ -77,9 +73,7 @@ const OurExpert = () => {
                       Begin renovation
                     </h4>
                     <p className="mt-2 dark:text-gray-600">
-                      At sed possim oporteat probatus, justo graece ne nec,
-                      minim commodo legimus ut vix. Ut eos iudico quando soleat,
-                      nam modus.
+                    Connect with our dedicated real estate professionals who are passionate about exceeding your expectations. Search our comprehensive listings to find your dream home.
                     </p>
                   </div>
                 </div>

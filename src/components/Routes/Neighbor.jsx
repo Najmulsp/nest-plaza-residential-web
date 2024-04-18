@@ -30,15 +30,13 @@ const Neighbor = () => {
           <div className="border-l-2 border-r-2 border-b-2">
             <h1 className="text-2xl font-bold pl-2">Cleveland</h1>
             <div className="flex items-center gap-4">
-            <HiOutlineClipboardDocumentList className="pl-2 text-2xl"/>
+              <HiOutlineClipboardDocumentList className="pl-2 text-2xl" />
               <p>
                 <span className="text-xl font-semibold">Listings: </span>2
               </p>
             </div>
             <div className="flex items-center gap-4">
-            
-            <FaSackDollar className="pl-2 text-2xl"/>
-
+              <FaSackDollar className="pl-2 text-2xl" />
 
               <p>
                 <span>Price:</span>$42,00 - $450,00
@@ -66,13 +64,13 @@ const Neighbor = () => {
           <div className="border-l-2 border-r-2 border-b-2">
             <h1 className="text-2xl font-bold pl-2">Los Angeles</h1>
             <div className="flex items-center gap-4">
-            <HiOutlineClipboardDocumentList className="pl-2 text-2xl"/>
+              <HiOutlineClipboardDocumentList className="pl-2 text-2xl" />
               <p>
                 <span className="text-xl font-semibold">Listings: </span>2
               </p>
             </div>
             <div className="flex items-center gap-4">
-            <FaSackDollar className="pl-2 text-2xl"/>
+              <FaSackDollar className="pl-2 text-2xl" />
               <p>
                 <span>Price:</span>$42,00 - $450,00
               </p>
@@ -99,13 +97,13 @@ const Neighbor = () => {
           <div className="border-l-2 border-r-2 border-b-2">
             <h1 className="text-2xl font-bold pl-2">Las Vegas</h1>
             <div className="flex items-center gap-4">
-            <HiOutlineClipboardDocumentList className="pl-2 text-2xl"/>
+              <HiOutlineClipboardDocumentList className="pl-2 text-2xl" />
               <p>
                 <span className="text-xl font-semibold">Listings: </span>2
               </p>
             </div>
             <div className="flex items-center gap-4">
-            <FaSackDollar className="pl-2 text-2xl"/>
+              <FaSackDollar className="pl-2 text-2xl" />
               <p>
                 <span>Price:</span>$42,00 - $450,00
               </p>
@@ -132,13 +130,13 @@ const Neighbor = () => {
           <div className="border-l-2 border-r-2 border-b-2">
             <h1 className="text-2xl font-bold pl-2">Philadephia</h1>
             <div className="flex items-center gap-4">
-            <HiOutlineClipboardDocumentList className="pl-2 text-2xl"/>
+              <HiOutlineClipboardDocumentList className="pl-2 text-2xl" />
               <p>
                 <span className="text-xl font-semibold">Listings: </span>2
               </p>
             </div>
             <div className="flex items-center gap-4">
-            <FaSackDollar className="pl-2 text-2xl"/>
+              <FaSackDollar className="pl-2 text-2xl" />
               <p>
                 <span>Price:</span>$42,00 - $450,00
               </p>

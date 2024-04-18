@@ -33,7 +33,6 @@ const Profile = () => {
     setLoading(true);
     updateUserProfile(name, photo);
     toast.success("Your profile has updated successfully");
-    // location.reload();
     setTimeout(setLoading, 1500, false);
   };
 
@@ -54,7 +53,6 @@ const Profile = () => {
               src={
                 user
                   ? user?.photoURL
-                  // : "https://i.ibb.co/hBtcNgp/blank-profile-picture.webp"
                   : "https://i.ibb.co/RPpmvwb/images-blank-profile.png"
               }
               alt="profile image"
