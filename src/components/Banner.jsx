@@ -25,7 +25,7 @@ const Banner = () => {
             data-aos="fade-right"
             data-aos-duration="2000"
             data-aos-delay="2000"
-            className="text-4xl font-extrabold text-orange-500 text-center pt-12 lg:pt-32"
+            className="text-4xl font-extrabold text-orange-500 text-center pt-8 lg:pt-32"
           >
             Welcome to Nest Plaza
           </h1>

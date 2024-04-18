@@ -2,7 +2,7 @@ import { FaHome } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-200 text-base-content">
+        <footer className="footer p-10 bg-base-200 text-base-content mt-10">
   <aside>
   <FaHome className="text-5xl"/>
     <p>Nest Plaza Residential Home<br/>Providing reliable residential services since 1992</p>

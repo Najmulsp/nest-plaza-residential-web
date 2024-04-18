@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet-async";
 import Banner from "./Banner";
 import { useLoaderData } from "react-router-dom";
 import Estates from "./Estates";
+import OurExpert from "./Routes/OurExpert";
+import Neighbor from "./Routes/Neighbor";
 
 const Home = () => {
   const estates = useLoaderData();
@@ -30,12 +32,14 @@ const Home = () => {
         >
           Explore your options to find your perfect match
         </p>
-        <div className="grid pl-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto w-[95%]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto w-[95%] justify-between">
           {estates.map((estate) => (
             <Estates key={estate.id} estate={estate}></Estates>
           ))}
         </div>
       </div>
+      <OurExpert></OurExpert>
+      <Neighbor></Neighbor>
     </div>
   );
 };

@@ -36,7 +36,8 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-           (isActive ? "bg-amber-400" : "")}
+            isActive ? "border-2 border-amber-400  font-bold" : ""
+          }
           to="/"
         >
           Home
@@ -44,33 +45,53 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-        className={({ isActive }) =>
-        (isActive ? "bg-amber-400" : "")}
-        to="/contact">Contact Us</NavLink>
+          className={({ isActive }) =>
+            isActive ? "border-2 border-amber-400  font-bold" : ""
+          }
+          to="/contact"
+        >
+          Contact Us
+        </NavLink>
       </li>
       <li>
         <NavLink
-        className={({ isActive }) =>
-        (isActive ? "bg-amber-400" : "")}
-        to="/agents">Our Agents</NavLink>
+          className={({ isActive }) =>
+            isActive ? "border-2 border-amber-400  font-bold" : ""
+          }
+          to="/agents"
+        >
+          Our Agents
+        </NavLink>
       </li>
       <li>
         <NavLink
-        className={({ isActive }) =>
-        (isActive ? "bg-amber-400" : "")}
-        to="/login">Login</NavLink>
-      </li>
-      <li>
-        <NavLink 
-        className={({ isActive }) =>
-        (isActive ? "bg-amber-400" : "")}
-        to="/register">Register</NavLink>
+          className={({ isActive }) =>
+            isActive ? "border-2 border-amber-400  font-bold" : ""
+          }
+          to="/login"
+        >
+          Login
+        </NavLink>
       </li>
       <li>
         <NavLink
-        className={({ isActive }) =>
-        (isActive ? "bg-amber-400" : "")}
-        to="/updateProfile">Your Profile</NavLink>
+          className={({ isActive }) =>
+            isActive ? "border-2 border-amber-400  font-bold" : ""
+          }
+          to="/register"
+        >
+          Register
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "border-2 border-amber-400  font-bold" : ""
+          }
+          to="/updateProfile"
+        >
+          Your Profile
+        </NavLink>
       </li>
     </>
   );

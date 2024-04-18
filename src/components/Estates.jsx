@@ -14,7 +14,7 @@ const Estates = ({ estate }) => {
 
   return (
     
-      <div className=" flex justify-center">
+      <div className=" flex justify-center mb-10">
         <div
           className="rounded-xl card  w-80 bg-base-100 shadow-xl box-border"
           data-aos="flip-left"
